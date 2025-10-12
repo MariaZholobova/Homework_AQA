@@ -96,7 +96,7 @@ public class Main {
     }
 
     public static void fillArray() {
-        int arr[] = new int [100];
+        int arr[] = new int[100];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
         }
@@ -114,7 +114,7 @@ public class Main {
     }
 
     public static void fillDiagonal() {
-        int [][] table = new int [3][3];
+        int[][] table = new int[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (i == j || i + j == 2) {
@@ -131,9 +131,8 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = initialValue;
         }
-            return arr;
+        return arr;
     }
-
 
 
     public static void main(String[] args) {
@@ -151,6 +150,5 @@ public class Main {
         doubleIfLessThan6();
         fillDiagonal();
         System.out.println(Arrays.toString(createArray(5, 2)));
-
     }
 }
