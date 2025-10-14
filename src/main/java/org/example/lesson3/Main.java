@@ -7,7 +7,7 @@ public class Main {
         p1.printProduct();
         p2.printProduct();
 
-/* Создать массив из 5 товаров. */
+        /* Создать массив из 5 товаров. */
 
         Product[] productArray = new Product[5];
         productArray[0] = new Product("Майка", "01.05.2025", "Ивановские товары", "Россия", 1200, true);

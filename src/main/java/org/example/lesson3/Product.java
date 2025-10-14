@@ -11,7 +11,8 @@ public class Product {
     String country;
     double price;
     boolean status;
-    public Product (String name, String productionDate, String producer, String country, double price, boolean status) {
+
+    public Product(String name, String productionDate, String producer, String country, double price, boolean status) {
         this.name = name;
         this.productionDate = productionDate;
         this.producer = producer;
@@ -19,6 +20,7 @@ public class Product {
         this.price = price;
         this.status = status;
     }
+
     public void printProduct() {
         System.out.println("Название: " + name);
         System.out.println("Дата производства: " + productionDate);
