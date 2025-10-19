@@ -31,5 +31,19 @@ public class Main {
 
         System.out.println("Добавляем еды в миску");
         bowl.addFood(30);
+
+
+        Circle circle = new Circle(5, "красный", "черный");
+        circle.printInfo();
+
+        Rectangle rectangle = new Rectangle(10, 20, "Желтый", "Зеленый");
+        rectangle.printInfo();
+
+        Triangle triangle = new Triangle(10, 25, 30, "Розовый", "Синий");
+        triangle.printInfo();
+
+        System.out.println(circle.calculateGetPerimeter());
+        System.out.println(rectangle.calculateGetPerimeter());
+        System.out.println(triangle.calculateGetPerimeter());
     }
 }
