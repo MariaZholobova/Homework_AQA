@@ -19,8 +19,11 @@ public class Main {
             productArray[i].printProduct();
         }
 
-        Park.Attractions rollerCoaster = new Park.Attractions("Американские горки", "9:00 - 18:00", 150);
-        Park.Attractions ferrisWheel = new Park.Attractions("Колесо обозрения", "10:00 - 17:00", 300.50);
+        Park park = new Park("Городской парк");
+        park.printInfoPark();
+
+        Park.Attractions rollerCoaster = park.new Attractions("Американские горки", "9:00 - 18:00", 150);
+        Park.Attractions ferrisWheel = park.new Attractions("Колесо обозрения", "10:00 - 17:00", 300.50);
         rollerCoaster.printInfo();
         ferrisWheel.printInfo();
 

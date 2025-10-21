@@ -5,12 +5,12 @@ package org.example.lesson3;
 Внутри класса «Товар» написать метод, который выводит информацию об объекте в консоль.*/
 
 public class Product {
-    String name;
-    String productionDate;
-    String producer;
-    String country;
-    double price;
-    boolean status;
+    private String name;
+    private String productionDate;
+    private String producer;
+    private String country;
+    private double price;
+    private boolean status;
 
     public Product(String name, String productionDate, String producer, String country, double price, boolean status) {
         this.name = name;

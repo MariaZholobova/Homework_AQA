@@ -3,16 +3,21 @@ package org.example.lesson3;
 времени их работы и стоимости.*/
 
 public class Park {
-    String name;
+    private String name;
 
     public Park(String name) {
         this.name = name;
     }
 
-    public static class Attractions {
-        String attractionName;
-        String openingHours;
-        double price;
+    public void printInfoPark() {
+        System.out.println("Парк: " + name);
+    }
+
+
+    public class Attractions {
+        private String attractionName;
+        private String openingHours;
+        private double price;
 
         public Attractions(String attractionName, String openingHours, double price) {
             this.attractionName = attractionName;
