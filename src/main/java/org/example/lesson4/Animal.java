@@ -20,12 +20,16 @@ package org.example.lesson4;
 о сытости котов в консоль.
 Добавить метод, с помощью которого можно было бы добавлять еду в миску*/
 public class Animal {
-    String name;
+    private String name;
     static int countAnimals = 0;
 
     public Animal(String name) {
         this.name = name;
         countAnimals++;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void run(int length) {

@@ -25,7 +25,7 @@ public class Main {
         cats[2] = new Cat("Тузик");
         for (int i = 0; i < cats.length; i++) {
             cats[i].eat(bowl, 20);
-            System.out.println(cats[i].name + " кот сыт? " + cats[i].isFullness);
+            System.out.println(cats[i].getName() + " кот сыт? " + cats[i].getIsFullness());
         }
         System.out.println("Остаток еды в миске: " + bowl.getFood());
 
