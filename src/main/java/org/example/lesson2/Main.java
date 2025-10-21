@@ -45,11 +45,7 @@ public class Main {
 
     public static boolean isSumInRange(int a, int b) {
         int sum = a + b;
-        if (sum >= 10 && sum <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return (sum >= 10 && sum <= 20);
     }
 
     public static void printNumberSign(int a) {
@@ -61,11 +57,7 @@ public class Main {
     }
 
     public static boolean isNegative(int a) {
-        if (a < 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return (a < 0);
     }
 
     public static void printText(String str, int count) {
@@ -75,11 +67,7 @@ public class Main {
     }
 
     public static boolean isLeapYear(int year) {
-        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-            return true;
-        } else {
-            return false;
-        }
+        return ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0));
     }
 
     public static void invertArray() {
