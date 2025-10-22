@@ -4,13 +4,13 @@ package org.example.lesson3;
 
 public class Park {
     private String name;
+    private Attractions[] attractions;
+    private int count;
 
-    public Park(String name) {
+    public Park(String name, int capacity) {
         this.name = name;
-    }
-
-    public void printInfoPark() {
-        System.out.println("Парк: " + name);
+        this.attractions = new Attractions[capacity];
+        this.count = 0;
     }
 
 
@@ -32,5 +32,23 @@ public class Park {
             System.out.println();
         }
 
+    }
+
+    public void addAttraction(Attractions attraction) {
+        if (count < attractions.length) {
+            attractions[count] = attraction;
+            count++;
+        } else {
+            System.out.println("Нельзя добавить больше аттракционов — парк заполнен");
+        }
+    }
+
+
+    public void printInfoPark() {
+        System.out.println("Парк: " + name);
+        System.out.println("Аттракционы в парке: ");
+        for (int i = 0; i < count; i++) {
+            attractions[i].printInfo();
+        }
     }
 }

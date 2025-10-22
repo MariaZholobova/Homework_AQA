@@ -19,13 +19,15 @@ public class Main {
             productArray[i].printProduct();
         }
 
-        Park park = new Park("Городской парк");
-        park.printInfoPark();
+        Park park = new Park("Городской парк", 5);
 
         Park.Attractions rollerCoaster = park.new Attractions("Американские горки", "9:00 - 18:00", 150);
         Park.Attractions ferrisWheel = park.new Attractions("Колесо обозрения", "10:00 - 17:00", 300.50);
-        rollerCoaster.printInfo();
-        ferrisWheel.printInfo();
+
+        park.addAttraction(rollerCoaster);
+        park.addAttraction(ferrisWheel);
+        park.printInfoPark();
+
 
     }
 }
