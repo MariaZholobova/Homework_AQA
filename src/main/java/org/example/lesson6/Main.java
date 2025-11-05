@@ -3,31 +3,6 @@ package org.example.lesson6;
 import java.util.*;
 
 public class Main {
-    public static void removeLowGrade(Set<Student> students) {
-        Iterator<Student> iterator = students.iterator();
-        while (iterator.hasNext()) {
-            Student s = iterator.next();
-            if (s.getAverageGrade() < 3.0) {
-                iterator.remove();
-            }
-        }
-    }
-
-    public static void promoteStudents(Set<Student> students) {
-        for (Student s : students) {
-            if (s.getAverageGrade() >= 3) {
-                s.setCourse(s.getCourse() + 1);
-            }
-        }
-    }
-
-    public static void printStudents(Set<Student> students, int course) {
-        for (Student s : students) {
-            if (course == s.getCourse()) {
-                System.out.println(s.getName());
-            }
-        }
-    }
 
     public static void main(String[] args) {
         Set<Student> students = new HashSet<>();
@@ -35,22 +10,21 @@ public class Main {
         students.add(new Student("Саша", "л-626", 6, List.of(3, 2, 2)));
         students.add(new Student("Максим", "л-214", 2, List.of(4, 2, 3)));
 
+        StudentManager manager = new StudentManager(students);
+
         System.out.println("Список студентов: ");
-        for (Student s : students) {
-            System.out.println(s.getName() + " - группа: " + s.getGroup() + ", курс: " + s.getCourse() + ", средний балл: " + s.getAverageGrade());
-        }
+        manager.printAllStudents();
 
-        removeLowGrade(students);
+        manager.removeLowGrade();
 
-        promoteStudents(students);
+        manager.promoteStudents();
 
         System.out.println("Список студентов после удаления и перевода: ");
-        for (Student s : students) {
-            System.out.println(s.getName() + ", курс: " + s.getCourse() + ", средний балл: " + s.getAverageGrade());
-        }
+        manager.printAllStudents();
+
 
         System.out.println("Студенты 2 курса: ");
-        printStudents(students, 2);
+        manager.printStudents(2);
 
         PhoneDirectory phoneDirectory = new PhoneDirectory();
 
