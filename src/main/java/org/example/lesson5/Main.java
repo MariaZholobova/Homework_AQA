@@ -28,12 +28,10 @@ public class Main {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                try {
-                    int value = Integer.parseInt(array[i][j]);
-                    sum += value;
-                } catch (NumberFormatException e) {
+                if (!array[i][j].matches("-?\\d+")) {
                     throw new MyArrayDataException("Ошибка в ячейке: [" + i + "][" + j + "]: " + array[i][j]);
                 }
+                sum += Integer.parseInt(array[i][j]);
             }
         }
         return sum;
