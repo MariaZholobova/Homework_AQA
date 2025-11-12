@@ -47,4 +47,12 @@ public class NumberComparatorTest {
         assertTrue(c.areNumbersEqual(55, 55), "55 равно 55 - true");
         assertFalse(c.areNumbersEqual(100, 15), "100 равно 15 - false");
     }
+
+    @Test
+    void testCompare() {
+        NumberComparator c = new NumberComparator();
+        assertEquals(-1, c.compare(12, 50), "12 меньше 50");
+        assertEquals(1, c.compare(100, 50), "100 больше 50");
+        assertEquals(0, c.compare(100, 100), "Числа равны");
+    }
 }

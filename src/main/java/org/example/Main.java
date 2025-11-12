@@ -19,5 +19,14 @@ public class Main {
         System.out.println("Результат сравнения: " + c.isNumberGreater(10, 5));
         System.out.println("Результат сравнения: " + c.isNumberLess(10, 5));
         System.out.println("Результат сравнения: " + c.areNumbersEqual(10, 10));
+
+        int result = c.compare(12, 50);
+        if (result > 0) {
+            System.out.println("Первое число больше");
+        } else if (result < 0) {
+            System.out.println("Первое число меньше");
+        } else {
+            System.out.println("Числа равны");
+        }
     }
 }

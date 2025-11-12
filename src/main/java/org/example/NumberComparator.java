@@ -22,4 +22,15 @@ public class NumberComparator {
     public boolean areNumbersEqual(int a, int b) {
         return a == b;
     }
+
+    /*Вариант с объединением*/
+    public int compare(int a, int b) {
+        if (a > b) {
+            return 1;
+        } else if (a < b) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
 }
